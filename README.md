@@ -1,4 +1,4 @@
-# srn
+# Student Resume Network
 Last year portfolio project.
 
 #MEAN Stack
