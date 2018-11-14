@@ -1,0 +1,8 @@
+// mixins
+// ===========
+
+@mixin dshadow{
+    -webkit-box-shadow: 4px 0px 10px 0px rgba(45,49,66,0.2);
+    -moz-box-shadow: 4px 0px 10px 0px rgba(45,49,66,0.2);
+    box-shadow: 4px 0px 10px 0px rgba(45,49,66,0.2);
+}

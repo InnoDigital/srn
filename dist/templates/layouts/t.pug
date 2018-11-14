@@ -1,0 +1,42 @@
+					
+
+			div.sidenav.d-flex.flex-column.justify-content-between
+				.navcontent
+					//- User info
+					img.img-fluid.rounded-circle.mx-auto.dshadow(src='/images/users/test.jpg', width='150px') 
+					.card-body.text-center.pb-1
+						p.h4.text-uppercase John Doe
+						p.font-weight-light Mandalorian Mining Company
+
+						//- Notifications
+					.notif.mb-4
+						p memes
+
+						//- Navigation
+					.text-center.navtext
+						ul.list-unstyled
+							each link in navLinks
+								li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label 
+									span.lstyle.align-middle.ml-3
+									
+									
+						ul.list-unstyled
+							if user
+								if user.canAccessKeystone
+									li: a(href='/keystone') Open Keystone
+										span.lstyle.align-middle.ml-3
+								li: a(href='/keystone/signout') Sign Out
+									span.lstyle.align-middle.ml-3
+							else
+								li: a(href='/keystone/signin') Sign In
+									span.lstyle.align-middle.ml-3
+				
+				//- footer
+				.cb.text-center.font-weight-light
+					.navbar-brand.c-footer.mx-auto
+						p Contact us over #[a(href="mailto:rainer@inno.digital") E-Mail]
+						hr
+						p Copyright © 2018 Inno Digital
+						a(href='#')
+							img(src='/images/logo.svg', width='120') 
+							
