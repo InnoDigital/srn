@@ -1,7 +1,7 @@
 # Student Resume Network
 Last year portfolio project.
 
-# Status
+## Status
 
 
 [![GitHub license](https://img.shields.io/github/license/InnoDigital/srn.svg?style=flat-square)](https://github.com/InnoDigital/srn/blob/master/LICENSE)
@@ -10,7 +10,7 @@ Last year portfolio project.
 
 
 
-# Tools Utilized
+### Tools Utilized
 - Keystone JS
 - React
 - MongoDB 
