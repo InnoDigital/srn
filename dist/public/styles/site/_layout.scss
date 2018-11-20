@@ -14,7 +14,7 @@ $csbeige: #DECBB7;
 $csblue: #009FFD;
 $csdarkblue: #2D3142;
 $csorange: #FFA400;
-$cswhiteish: #f7f7f7;
+$cswhiteish: rgb(247, 247, 247);
 $f-heading: 'Nunito Sans', sans-serif;
 $f-content: 'Lato', sans-serif;
 
@@ -28,12 +28,13 @@ html {
     // padding: 0px 10px;
 
     h1,h2,h3,h4,h5{
-        font-family: $f-heading;
+		font-family: $f-heading;
+		color: $csdarkblue;
     }
 
     p,a{
         font-family: $f-content;
-
+		color: $csdarkblue;
     }
 }
 
@@ -202,9 +203,10 @@ body{
 // Content
 // ===========
 
-.container {
+#l-body {
+	padding: 0;
+	margin:0;
 
-    background-color: #fff;
 
 }
 

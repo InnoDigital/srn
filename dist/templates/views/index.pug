@@ -1,23 +1,162 @@
 extends ../layouts/landing
 
 block content
-	.container-fluid
-		img(src='/images/logo.svg', width='160')
-		h1 Welcome
-		p This is your new <a href='http://keystonejs.com' target='_blank'>KeystoneJS</a> website.
-		p It includes the latest versions of
-			| <a href='http://getbootstrap.com/' target='_blank'>Bootstrap</a>
-			| and <a href='http://www.jquery.com/' target='_blank'>jQuery</a>.
-		p Visit the <a href='http://keystonejs.com/guide' target='_blank'>Getting Started</a> guide to learn how to customise it.
-		hr
-		if user && user.canAccessKeystone
-			p
-				a(href='/keystone').btn.btn-lg.btn-primary Open the Admin UI
-		else
-			p We have created a default Admin user for you with the email <strong>rainer@inno.digital</strong> and the password <strong>admin</strong>.
-			p
-				a(href='/keystone/signin', style='margin-right: 10px').btn.btn-lg.btn-primary Sign in
-				|  to use the Admin UI.
-		hr
-		p Remember to <a href='https://github.com/keystonejs/keystone' target='_blank'>Star KeystoneJS on GitHub</a> and
-			| <a href='https://twitter.com/keystonejs' target='_blank'>follow @keystonejs</a> on twitter for updates.
+
+	//- Navigation
+	nav#mainNav.navbar.navbar-expand-lg.navbar-light.fixed-top
+		.container
+			a.navbar-brand.js-scroll-trigger(href="#page-top") 
+				img(src='/images/logo.svg', width='160em')
+			button.navbar-toggler.navbar-toggler-right(type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation")
+				| Menu
+				i.fas.fa-bars
+			#navbarResponsive.collapse.navbar-collapse
+				ul.navbar-nav.ml-auto
+					li.nav-item
+						a.nav-link.js-scroll-trigger(href="#about") About
+					li.nav-item
+						a.nav-link.js-scroll-trigger(href="#projects") Projects
+					li.nav-item
+						a.nav-link.js-scroll-trigger(href="#signup") Contact
+					if user && user.canAccessKeystone
+						a.nav-link(href='/keystone') Open the Admin UI
+	//- Header
+	header.masthead#page-top
+		.h-100.align-items-center.d-flex.justify-content-center
+			.row.text-center.w-100
+				.col-md-6.col-12.col-sm-12
+					h2.text-white-50.mx-auto Come check out our talent!
+					p.small Lorem ipsum dolor sit amet
+					if user && user.canAccessKeystone
+						p
+							a(href='/keystone').btn.btn-lg.btn-primary Open the Admin UI
+					else
+						p
+							a(href='/keystone/signin', style='margin-right: 10px').btn.btn-lg.btn-primary Sign in
+					p
+						small Already a member ? 
+							a(href='/keystone') Sign in !
+				.col-md-6.col-12.col-sm-12.d-flex-column
+					h2.text-white-50.mx-auto Portfolio pages for students!
+					p.small Lorem ipsum dolor sit amet 
+					if user && user.canAccessKeystone
+						p
+							a(href='/keystone').btn.btn-lg.btn-primary.mb-0 Open the Admin UI
+					else
+						p
+							a(href='/keystone/signin', style='margin-right: 10px').btn.btn-lg.btn-primary Sign in
+					p
+						small Already a member ? 
+							a(href='/keystone') Sign in !
+	//- About Section
+	section#about.about-section.text-center
+		.container
+			.row
+				.col-md-4.mb-3.mb-md-0
+					.card.py-4.h-100
+						.card-body.text-center
+							img(src='/images/l/undraw_report_mx0a.png', height='250px')
+							h4.m-0 Personalization
+							p.my-3.small Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada dictum eros sed porta. Suspendisse potenti.
+				.col-md-4.mb-3.mb-md-0
+					.card.py-4.h-100
+						.card-body.text-center
+							img(src='/images/l/undraw_hiring_cyhs.png', height='250px')
+							h4.m-0 Diverse Talent
+							p.my-3.small Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada dictum eros sed porta. Suspendisse potenti.
+				.col-md-4.mb-3.mb-md-0
+					.card.py-4.h-100
+						.card-body.text-center
+							img(src='/images/l/undraw_people_search_wctu.png', height='250px')
+							h4.m-0 Specification
+							p.my-3.small Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada dictum eros sed porta. Suspendisse potenti.
+			.row.my-3
+				.col-md-12.mb-3.mb-md-0
+					h2.m-0 Why us ?
+					hr
+					.my-3.small.text-black-50 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada dictum eros sed porta. Suspendisse potenti. Sed turpis velit, blandit congue congue ullamcorper, imperdiet quis magna. In ut euismod lacus, ut blandit leo. Vestibulum cursus a mauris sed accumsan. Phasellus a dignissim nisl. Vestibulum bibendum varius erat ac efficitur. Mauris aliquet porta mollis.
+
+	//- Projects Section
+	section#projects.projects-section.bg-light
+		.container
+			// Featured Project Row
+			.row.align-items-center.no-gutters.mb-4.mb-lg-5
+				.col-xl-8.col-lg-7
+					img.img-fluid.mb-3.mb-lg-0(src="/images/bg-masthead.jpg" alt="")
+				.col-xl-4.col-lg-5
+					.featured-text.text-center.text-lg-left
+						h4 Shoreline
+						p.text-black-50.mb-0
+							| Grayscale is open source and MIT licensed. This means you can use it for any project - even commercial projects! Download it, customize it, and publish your website!
+			//- Project One Row
+			.row.justify-content-center.no-gutters.mb-5.mb-lg-0
+				.col-lg-6
+					img.img-fluid(src="/images/demo-image-01.jpg" alt="")
+				.col-lg-6
+					.bg-black.text-center.h-100.project
+						.d-flex.h-100
+							.project-text.w-100.my-auto.text-center.text-lg-left
+								h4.text-white Misty
+								p.mb-0.text-white An example of where you can put an image of a project, or anything else, along with a description.
+								hr.d-none.d-lg-block.mb-0.ml-0
+			//- Project Two Row
+			.row.justify-content-center.no-gutters
+				.col-lg-6
+					img.img-fluid(src="/images/demo-image-02.jpg" alt="")
+				.col-lg-6.order-lg-first
+					.bg-black.text-center.h-100.project
+						.d-flex.h-100
+							.project-text.w-100.my-auto.text-center.text-lg-right
+								h4.text-white Mountains
+								p.mb-0.text-white
+									| Another example of a project with its respective description. These sections work well responsively as well, try this theme on a small screen!
+								hr.d-none.d-lg-block.mb-0.mr-0
+	//- Signup Section
+	section#signup.signup-section
+		.container
+			.row
+				.col-md-10.col-lg-8.mx-auto.text-center
+					i.fas.fa-bolt.mb-2.text-white
+					h2.text-white.mb-5 Subscribe to receive updates!
+					form.form-inline.d-flex
+						input#inputEmail.form-control.flex-fill.mr-0.mr-sm-2.mb-3.mb-sm-0(type="email" placeholder="Enter email address...")
+						button.btn.btn-primary.mx-auto(type="submit") Subscribe
+	//- Contact Section
+	section.contact-section.bg-black
+		.container
+			.row
+				.col-md-4.mb-3.mb-md-0
+					.card.py-4.h-100
+						.card-body.text-center
+							i.fas.fa-map-marked-alt.text-primary.mb-2
+							h4.text-uppercase.m-0 Address
+							hr.my-4
+							.small.text-black-50 4923 Market Street, Orlando FL
+				.col-md-4.mb-3.mb-md-0
+					.card.py-4.h-100
+						.card-body.text-center
+							i.fas.fa-envelope.text-primary.mb-2
+							h4.text-uppercase.m-0 Email
+							hr.my-4
+							.small.text-black-50
+								a(href="#") hello@yourdomain.com
+				.col-md-4.mb-3.mb-md-0
+					.card.py-4.h-100
+						.card-body.text-center
+							i.fas.fa-mobile-alt.text-primary.mb-2
+							h4.text-uppercase.m-0 Phone
+							hr.my-4
+							.small.text-black-50 +1 (555) 902-8832
+			.social.d-flex.justify-content-center
+				a.mx-2(href="#")
+					i.fab.fa-twitter
+				a.mx-2(href="#")
+					i.fab.fa-facebook-f
+				a.mx-2(href="#")
+					i.fab.fa-github
+	//- Footer
+	footer.bg-black.small.text-center.text-white-50
+		.container
+			| Copyright © Your Website 2018
+
+	
