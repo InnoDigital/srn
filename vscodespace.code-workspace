@@ -1,0 +1,10 @@
+{
+	"folders": [
+		{
+			"path": "dist"
+		}
+	],
+	"settings": {
+		"files.autoSave": "afterDelay"
+	}
+}
