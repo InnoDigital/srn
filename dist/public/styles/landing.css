@@ -2,6 +2,8 @@
  * Start Bootstrap - Grayscale v5.0.2 (https://startbootstrap.com/template-overviews/grayscale)
  * Copyright 2013-2018 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-grayscale/blob/master/LICENSE)
+ * 
+ * Edited and expanded on by Rainer Leit
  */
 
 #mainNav {
@@ -12,8 +14,8 @@
   #mainNav .navbar-toggler {
     font-size: 80%;
     padding: 0.75rem;
-    color: #64a19d;
-    border: 1px solid #64a19d;
+    color: #FFA400;
+    border: 1px solid #FFA400;
   }
   
   #mainNav .navbar-toggler:focus {
@@ -176,73 +178,48 @@
     background-color: rgb(221, 144, 0) !important;
   }
   
-  .about-section {
+  .intro-section {
     padding-top: 5rem;
     padding-bottom: 5rem;
     background-color: #fff;
   }
   
-  .about-section p {
+  .intro-section p {
     margin-bottom: 5rem;
   }
 
-  .about-section .card {
+  .intro-section .card {
 
     border: none;
   }
   
-  .projects-section {
-    padding: 10rem 0;
+  .about-section {
+    padding: 5rem 0;
   }
   
-  .projects-section .featured-text {
-    padding: 2rem;
-  }
+ 
   
   @media (min-width: 992px) {
-    .projects-section .featured-text {
-      padding: 0 0 0 2rem;
-      border-left: 0.5rem solid #FFA400;
-    }
+    
   }
   
-  .projects-section .project-text {
+  .about-section .project-text {
     padding: 3rem;
     font-size: 90%;
   }
   
   @media (min-width: 992px) {
-    .projects-section .project-text {
+    .about-section .project-text {
       padding: 5rem;
     }
-    .projects-section .project-text hr {
+    .about-section .project-text hr {
       border-color: #FFA400;
       border-width: .25rem;
       width: 30%;
     }
   }
   
-  .signup-section {
-    padding: 10rem 0;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.1)), color-stop(75%, rgba(22, 22, 22, 0.5)), to(#161616)), url("/images/bg-signup.jpg");
-    background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("/images/bg-signup.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-size: cover;
-  }
-  
-  .signup-section .form-inline input {
-    -webkit-box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
-    box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
-    padding: 1.25rem 2rem;
-    height: auto;
-    font-family:  'Lato', sans-serif;
-    font-size: 80%;
-    text-transform: uppercase;
-    letter-spacing: 0.15rem;
-    border: 0;
-  }
+ 
   
   .contact-section {
     padding: 5rem 0 0;
@@ -266,6 +243,13 @@
     width: 3rem;
   }
   
+  .intro-section hr{ 
+    border-color: #FFA400;
+    border-width: 0.25rem;
+    width: 7rem;
+
+  }
+
   .about-section hr{ 
     border-color: #FFA400;
     border-width: 0.25rem;
@@ -308,8 +292,8 @@
     color: #FFA400;
   }
   
-  .bg-black {
-    background-color: #161616 !important;
+  .bg-dark {
+    background-color: #2D3142 !important;
   }
   
   .bg-primary {
@@ -322,5 +306,17 @@
   
   footer {
     padding: 5rem 0;
+  }
+
+  footer p {
+    color: #fff;
+  
+
+  }
+
+  footer a{
+
+    color: #fff;
+
   }
   

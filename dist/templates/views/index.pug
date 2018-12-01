@@ -8,16 +8,16 @@ block content
 			a.navbar-brand.js-scroll-trigger(href="#page-top") 
 				img(src='/images/logo.svg', width='160em')
 			button.navbar-toggler.navbar-toggler-right(type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation")
-				| Menu
+				
 				i.fas.fa-bars
 			#navbarResponsive.collapse.navbar-collapse
 				ul.navbar-nav.ml-auto
 					li.nav-item
+						a.nav-link.js-scroll-trigger(href="#intro") Why
+					li.nav-item
 						a.nav-link.js-scroll-trigger(href="#about") About
 					li.nav-item
-						a.nav-link.js-scroll-trigger(href="#projects") Projects
-					li.nav-item
-						a.nav-link.js-scroll-trigger(href="#signup") Contact
+						a.nav-link.js-scroll-trigger(href="#contact") Contact
 					if user && user.canAccessKeystone
 						a.nav-link(href='/keystone') Open the Admin UI
 	//- Header
@@ -48,8 +48,8 @@ block content
 					p
 						small Already a member ? 
 							a(href='/keystone') Sign in !
-	//- About Section
-	section#about.about-section.text-center
+	//- introduction Section
+	section#intro.intro-section.text-center
 		.container
 			.row
 				.col-md-4.mb-3.mb-md-0
@@ -76,53 +76,31 @@ block content
 					hr
 					.my-3.small.text-black-50 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada dictum eros sed porta. Suspendisse potenti. Sed turpis velit, blandit congue congue ullamcorper, imperdiet quis magna. In ut euismod lacus, ut blandit leo. Vestibulum cursus a mauris sed accumsan. Phasellus a dignissim nisl. Vestibulum bibendum varius erat ac efficitur. Mauris aliquet porta mollis.
 
-	//- Projects Section
-	section#projects.projects-section.bg-light
+	//- about Section
+	section#about.about-section.bg-light
 		.container
-			// Featured Project Row
+			.row.mb-5
+				.col-md-12.mb-md-0
+					h2.text-center About Us
+					hr
+					
 			.row.align-items-center.no-gutters.mb-4.mb-lg-5
-				.col-xl-8.col-lg-7
-					img.img-fluid.mb-3.mb-lg-0(src="/images/bg-masthead.jpg" alt="")
-				.col-xl-4.col-lg-5
-					.featured-text.text-center.text-lg-left
-						h4 Shoreline
+				.col-xl-5.col-lg-6.mb-3.mb-lg-0
+					img.img-fluid.mx-auto.d-block(src="/images/l/undraw_content_vbqo.png" alt="")
+				.col-xl-7.col-lg-6
+					.ml-5.text-center.text-lg-left
+						h4 
 						p.text-black-50.mb-0
-							| Grayscale is open source and MIT licensed. This means you can use it for any project - even commercial projects! Download it, customize it, and publish your website!
-			//- Project One Row
-			.row.justify-content-center.no-gutters.mb-5.mb-lg-0
-				.col-lg-6
-					img.img-fluid(src="/images/demo-image-01.jpg" alt="")
-				.col-lg-6
-					.bg-black.text-center.h-100.project
-						.d-flex.h-100
-							.project-text.w-100.my-auto.text-center.text-lg-left
-								h4.text-white Misty
-								p.mb-0.text-white An example of where you can put an image of a project, or anything else, along with a description.
-								hr.d-none.d-lg-block.mb-0.ml-0
-			//- Project Two Row
-			.row.justify-content-center.no-gutters
-				.col-lg-6
-					img.img-fluid(src="/images/demo-image-02.jpg" alt="")
-				.col-lg-6.order-lg-first
-					.bg-black.text-center.h-100.project
-						.d-flex.h-100
-							.project-text.w-100.my-auto.text-center.text-lg-right
-								h4.text-white Mountains
-								p.mb-0.text-white
-									| Another example of a project with its respective description. These sections work well responsively as well, try this theme on a small screen!
-								hr.d-none.d-lg-block.mb-0.mr-0
-	//- Signup Section
-	section#signup.signup-section
-		.container
-			.row
-				.col-md-10.col-lg-8.mx-auto.text-center
-					i.fas.fa-bolt.mb-2.text-white
-					h2.text-white.mb-5 Subscribe to receive updates!
-					form.form-inline.d-flex
-						input#inputEmail.form-control.flex-fill.mr-0.mr-sm-2.mb-3.mb-sm-0(type="email" placeholder="Enter email address...")
-						button.btn.btn-primary.mx-auto(type="submit") Subscribe
+							p Team of professionals with a long career in the field of research and consulting, whose philosophy is to be clear and direct in the execution and interpretation of market studies.
+							p We apply an integral approach to market research, through the use of qualitative and quantitative information collection tools.
+							p Passionate about research.
+							p Rigorous in the application of methodological approaches.
+							p We are part of the faculty of prestigious business schools.
+							p Accessible, close, collaborators.
+			
+	
 	//- Contact Section
-	section.contact-section.bg-black
+	section#contact.contact-section.bg-dark
 		.container
 			.row
 				.col-md-4.mb-3.mb-md-0
@@ -155,8 +133,10 @@ block content
 				a.mx-2(href="#")
 					i.fab.fa-github
 	//- Footer
-	footer.bg-black.small.text-center.text-white-50
+	footer.bg-dark.small.text-center.text-white
 		.container
-			| Copyright © Your Website 2018
+			p Copyright © 
+				a(href='http://inno.digital') inno.digital 
+			p 2018
 
 	
