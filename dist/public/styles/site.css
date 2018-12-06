@@ -6039,11 +6039,16 @@ a.text-dark:hover, a.text-dark:focus {
   .table-bordered td {
     border: 1px solid #ddd !important; } }
 
-html h1, html h2, html h3, html h4, html h5 {
+html h1,
+html h2,
+html h3,
+html h4,
+html h5 {
   font-family: "Nunito Sans", sans-serif;
   color: #2D3142; }
 
-html p, html a {
+html p,
+html a {
   font-family: "Lato", sans-serif;
   color: #2D3142; }
 
@@ -6126,12 +6131,43 @@ body {
   text-shadow: 0 0 black; }
 
 .notif {
-  height: 50px;
-  background-color: #f7f7f7; }
+  height: 3rem;
+  background-color: #F1F1F1; }
+  .notif a {
+    color: #2D3142; }
+  .notif a:hover {
+    color: #FFA400; }
+  .notif div {
+    border-left: 1px solid #CDCDCD; }
+  .notif .last {
+    border-right: 1px solid #CDCDCD; }
 
 #l-body {
   padding: 0;
   margin: 0; }
+
+.bg-lightish {
+  background-color: #F7F7F7; }
+
+.dashinfo-t {
+  -webkit-box-shadow: 4px 0px 10px 0px rgba(45, 49, 66, 0.2);
+  -moz-box-shadow: 4px 0px 10px 0px rgba(45, 49, 66, 0.2);
+  box-shadow: 4px 0px 10px 0px rgba(45, 49, 66, 0.2); }
+
+.dashboard-b .dashinfo-t {
+  border-left: 1px solid #f7f7f7; }
+
+.dashboard-b .last {
+  border-right: 0px solid #CDCDCD; }
+
+.dashboard-b .first {
+  border-left: 0px solid #CDCDCD; }
+
+.t-red {
+  color: #DB5461; }
+
+.t-orange {
+  color: #FFA400; }
 
 /*!
  * Start Bootstrap - Simple Sidebar (https://startbootstrap.com/)

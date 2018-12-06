@@ -10,8 +10,18 @@ Last year portfolio project.
 
 
 
-### Tools Utilized
-- Keystone JS
-- React
-- MongoDB 
-  - Connected with Google Cloud Platform in Belgium for free database hosting.
+## Built With
+
+* [Keystone JS](https://keystonejs.com/) - The CMS framework used
+* [React](https://reactjs.org/) - What Keystone is built on (Restructured Admin Panels)
+* [MongoDB](https://www.mongodb.com/) - Database
+
+## Authors
+
+* **Rainer Leit** - [Inno Digital](https://inno.digital)
+
+## Acknowledgments
+
+* 
+* 
+* 

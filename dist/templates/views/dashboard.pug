@@ -1,8 +1,46 @@
 extends ../layouts/default
 
 block intro
-	.container-fluid
-		h1 Gallery
+	.container-fluid.mt-5.bg-lightish
+		.row.dashboard-b
+			.col-lg-12
+				h2 Welcome Back , #[strong.t-orange John!] 
+					
+
+			.col-xl-3.col-sm-6.mb-3.bg-white.dashinfo-t.first
+				.t-red.o-hidden.h-100.text-center
+					.card-body
+						.card-body-icon
+							i.fa.fa-fw.fa-file.fa-2x
+						.mt-4 35 New Applicants!
+						a.clearfix.small(href="")
+							| View Details
+			.col-xl-3.col-sm-6.mb-3.bg-white.dashinfo-t
+				.t-red.o-hidden.h-100.text-center
+					.card-body
+						.card-body-icon
+							i.fa.fa-fw.fa-users.fa-2x
+						.mt-4 5 Potential Talent
+						a.clearfix.small(href="")
+							| View Details
+			.col-xl-3.col-sm-6.mb-3.bg-white.dashinfo-t
+				.t-red.o-hidden.h-100.text-center
+					.card-body
+						.card-body-icon
+							i.fa.fa-fw.fa-envelope.fa-2x
+						.mt-4 2 New Messages
+						a.clearfix.small(href="")
+							| View Details
+			.col-xl-3.col-sm-6.mb-3.bg-white.dashinfo-t.last
+				.t-red.o-hidden.h-100.text-center
+					.card-body
+						.card-body-icon
+							i.fa.fa-fw.fa-eye.fa-2x
+						.mt-4 580 Listing views!
+						a.clearfix.small(href="")
+							| View Details
+		.row
+			.col-xl
 	
     
 block content

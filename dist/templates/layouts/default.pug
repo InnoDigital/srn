@@ -42,17 +42,27 @@ html
 	body
 		#wrapper
 			#sidebar-wrapper
-				div.sidenav.d-m-flex.flex-column.justify-content-between
+				div.sidenav.d-m-flex.flex-column.justify-content-between.mt-5
 					.navcontent
 						//- User info
-						img.img-fluid.rounded-circle.mx-auto.dshadow(src='/images/users/test.jpg', width='150px') 
+						img.img-fluid.rounded-circle.mx-auto.dshadow(src='/images/users/test.jpg', width='125px') 
 						.card-body.text-center.pb-1
 							h4.text-uppercase John Doe
 							p.font-weight-light Mandalorian Mining Company
 
 							//- Notifications
-						.notif.mb-4
-							p memes
+						.notif.mb-2.text-center.d-flex.flex-row.justify-content-center
+							.my-auto.px-3
+								a(href="#email")
+									i.fa.fa-envelope.fa-lg
+							.my-auto.px-3
+								a(href="#email")
+									i.fa.fa-bell.fa-lg
+							.my-auto.px-3.last
+								a(href="#email")
+									i.fa.fa-search.fa-lg
+
+	
 
 							//- Navigation
 						.text-center.navtext
@@ -74,7 +84,7 @@ html
 										span.lstyle.align-middle.ml-3
 					
 					//- footer
-					.cb.text-center.font-weight-light
+					.cb.text-center
 						.navbar-brand.c-footer.mx-auto
 							p Contact us over #[a(href="mailto:rainer@inno.digital") E-Mail]
 							hr
